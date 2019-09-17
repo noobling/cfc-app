@@ -28,7 +28,7 @@
     "@vue/cli-service": "3.11.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
-    "lint-staged": "8.2.1",
+    "lint-staged": "9.2.5",
     "sass": "1.22.12",
     "sass-loader": "7.3.1",
     "ts-jest": "23.10.5",
