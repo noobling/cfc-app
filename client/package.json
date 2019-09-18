@@ -13,17 +13,19 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.1.6",
     "@nuxtjs/axios": "5.6.0",
     "@nuxtjs/pwa": "2.6.0",
-    "@nuxtjs/vuetify": "0.5.7",
+    "@nuxtjs/vuetify": "1.8.4",
+    "auth0-js": "^9.11.3",
     "nuxt": "2.9.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "0.2.8",
-    "@nuxtjs/eslint-config": "0.0.1",
     "@nuxtjs/eslint-module": "1.1.0",
+    "@nuxtjs/eslint-config": "1.1.2",
     "babel-eslint": "10.0.3",
-    "eslint": "5.16.0",
+    "eslint": "^6.4.0",
     "eslint-config-prettier": "4.3.0",
     "eslint-config-standard": "14.1.0",
     "eslint-plugin-import": "2.18.2",
