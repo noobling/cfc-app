@@ -1,7 +1,10 @@
 {
   "extends": ["config:base"],
-  "patch": {
-    "mergeable": true
+  "automerge": true,
+  "major": {
+    "automerge": false
   },
-  "separateMinorPatch": true
+  "minor": {
+    "automerge": false
+  }
 }
