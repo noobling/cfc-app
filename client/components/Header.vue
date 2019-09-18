@@ -6,27 +6,38 @@
     <div class="flex-grow-1"></div>
 
     <v-toolbar-items>
-      <v-btn text>Link 1</v-btn>
-      <v-btn text>Link 2</v-btn>
-      <v-btn text>Link 3</v-btn>
+      <v-btn text @click="login">Login</v-btn>
     </v-toolbar-items>
-
-    <template v-if="$vuetify.breakpoint.smAndUp">
-      <v-btn icon>
-        <v-icon>mdi-export-variant</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-delete-circle</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-plus-circle</v-icon>
-      </v-btn>
-    </template>
   </v-toolbar>
 </template>
 
-<script lang="ts">
-export default {}
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      isAuthenticated: false
+    }
+  },
+  async created() {
+    try {
+      await this.$auth.renewTokens()
+    } catch (e) {
+      console.log(e)
+    }
+  },
+  methods: {
+    login() {
+      this.$auth.login()
+    },
+    logout() {
+      this.$auth.logOut()
+    },
+    handleLoginEvent(data) {
+      this.isAuthenticated = data.loggedIn
+    }
+  }
+}
 </script>
 
 <style scoped>
